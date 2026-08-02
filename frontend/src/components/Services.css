@@ -1,0 +1,149 @@
+.services {
+    background-color: #e5e7eb;
+    padding: 50px 0 20px 0;
+    border-top: 1px solid #d1d5db;
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+    display: block; /* Ensure it behaves as a normal block to prevent flex stretch */
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.section-header p {
+    color: #6b7280;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.services-carousel-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 10px 0 30px 0;
+    overflow: hidden;
+}
+
+.services-swiper {
+    padding-bottom: 50px !important;
+    width: 100%;
+}
+
+.service-card {
+    background: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 6px 10px rgba(15, 23, 42, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(0, 102, 204, 0.4);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.15);
+}
+
+.service-image-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.service-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image-container img {
+    transform: scale(1.1);
+}
+
+.service-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-dark);
+}
+
+.service-card p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.read-more {
+    color: var(--secondary-color);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: gap 0.2s;
+    margin-top: auto;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    gap: 8px;
+}
+
+/* Swiper custom styling */
+.swiper-pagination-bullet-active {
+    background-color: var(--secondary-color) !important;
+}
+
+/* Custom Navigation Arrows Override for Light Theme */
+.services .custom-nav-arrow {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--primary-color);
+}
+
+.services .custom-nav-arrow:hover {
+    background: rgba(0, 0, 0, 0.15);
+    color: var(--secondary-color);
+}
+
+@media (max-width: 640px) {
+    .services-swiper {
+        width: 85%; /* Reduce width of the card wrapper */
+        margin: 0 auto; /* Center it */
+    }
+
+    .service-content {
+        padding: 1.2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+    }
+}

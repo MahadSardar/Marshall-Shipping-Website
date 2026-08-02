@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #003366;
+  /* Deep Blue */
+  --secondary-color: #FF9933;
+  /* Vibrant Orange */
+  --accent-color: #0066CC;
+  /* Brighter Blue */
+  --text-dark: #1F2937;
+  --text-light: #F3F4F6;
+  --bg-light: #FFFFFF;
+  --bg-dark: #111827;
+
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  font-family: 'Inter', sans-serif;
+}
+
+section {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e68a00;
+  transform: translateY(-2px);
+}
+
+/* Custom Navigation Arrows */
+.custom-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 50;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.custom-nav-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.custom-nav-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+.custom-nav-arrow.prev {
+    left: 20px;
+}
+
+.custom-nav-arrow.next {
+    right: 20px;
+}
+
+@media (max-width: 768px) {
+    .custom-nav-arrow {
+        display: none;
+    }
+}

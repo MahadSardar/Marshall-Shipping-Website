@@ -1,0 +1,145 @@
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.hero-swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark semi-transparent overlay */
+    z-index: 2;
+}
+
+.hero-content-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    pointer-events: none; /* Let clicks pass through if needed, except on buttons */
+    padding-top: 80px; /* Offset for navbar */
+}
+
+.hero-content {
+    max-width: 800px;
+    color: white;
+    text-align: left;
+    pointer-events: auto; /* Re-enable clicks for content */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    animation: fadeUp 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    animation: fadeUp 1s ease-out 0.2s backwards;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    animation: fadeUp 1s ease-out 0.4s backwards;
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

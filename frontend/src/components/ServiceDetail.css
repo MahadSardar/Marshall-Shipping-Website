@@ -1,0 +1,142 @@
+.service-detail-page {
+    padding-top: var(--nav-height, 80px);
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.service-hero {
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.service-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.service-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.service-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.service-main-content {
+    padding: 60px 20px;
+    display: flex;
+    gap: 40px;
+}
+
+.service-content-left {
+    flex: 2;
+}
+
+.service-content-right {
+    flex: 1;
+}
+
+.service-section {
+    margin-bottom: 40px;
+}
+
+.service-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.service-section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+}
+
+.service-features-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-features-list li {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    color: #444;
+}
+
+.service-features-list li::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.service-side-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    object-fit: cover;
+    height: 300px;
+}
+
+.service-contact-card {
+    background: var(--primary-color);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-contact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-contact-card p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.btn-outline-dark {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-outline-dark:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .service-main-content {
+        flex-direction: column;
+    }
+    
+    .service-hero-content h1 {
+        font-size: 2.5rem;
+    }
+}

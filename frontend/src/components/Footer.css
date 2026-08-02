@@ -1,0 +1,126 @@
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 0 20px;
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    margin-bottom: 3rem;
+    align-items: baseline;
+    /* justify-items: center; */
+
+}
+
+.footer-col h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-col p {
+    color: #d1d5db;
+    font-size: 0.95rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.contact-info1 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info1 ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.contact-info1 li {
+    display: flex;
+    /* align-items: center; */
+    gap: 10px;
+    margin-bottom: 0.8rem;
+    color: #d1d5db;
+    font-size: 0.95rem;
+}
+
+.contact-info1 .icon {
+    font-size: 1.25rem;
+    min-width: 20px;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    list-style: none;
+}
+
+.social-icons li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icons li span {
+    font-size: 1.25rem;
+}
+
+.social-icon {
+    background-color: transparent;
+    color: #d1d5db;
+    padding: 0;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.social-icon:hover {
+    background-color: transparent;
+    color: var(--secondary-color);
+    padding-left: 5px;
+    /* Subtle movement on hover */
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .contact-info li {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
