@@ -140,7 +140,7 @@ const ServiceDetail = () => {
                     </section>
                     
                     <div style={{ marginTop: '2rem' }}>
-                         <a href="/#contact" className="btn btn-primary">Request a Quote</a>
+                         <a href="#contact" className="btn btn-primary">Request a Quote</a>
                     </div>
                 </div>
 
@@ -150,7 +150,7 @@ const ServiceDetail = () => {
                     <div className="service-contact-card">
                         <h3>Need help with {service.title}?</h3>
                         <p>Our experts are ready to provide you with the best solutions.</p>
-                        <a href="/#contact" className="btn btn-outline-dark">Contact Us Today</a>
+                        <a href="#contact" className="btn btn-outline-dark">Contact Us Today</a>
                     </div>
                 </div>
             </div>
