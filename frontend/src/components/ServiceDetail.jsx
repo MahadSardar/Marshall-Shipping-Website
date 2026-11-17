@@ -11,6 +11,7 @@ import supply2 from '/src/assets/Supplychain 2.jpg';
 import consulting2 from '/src/assets/logistics consulting 2.jpg';
 import land2 from '/src/assets/Land Transport 2.png';
 
+
 const serviceData = {
     'ocean-freight': {
         title: 'Ocean Freight',
@@ -140,7 +141,7 @@ const ServiceDetail = () => {
                     </section>
                     
                     <div style={{ marginTop: '2rem' }}>
-                         <a href="#contact" className="btn btn-primary">Request a Quote</a>
+                        <Link to="/#contact" className="btn btn-primary">Request a Quote</Link>
                     </div>
                 </div>
 
@@ -150,7 +151,7 @@ const ServiceDetail = () => {
                     <div className="service-contact-card">
                         <h3>Need help with {service.title}?</h3>
                         <p>Our experts are ready to provide you with the best solutions.</p>
-                        <a href="#contact" className="btn btn-outline-dark">Contact Us Today</a>
+                        <Link to="/#contact" className="btn btn-outline-dark">Contact Us Today</Link>
                     </div>
                 </div>
             </div>

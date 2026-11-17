@@ -7,12 +7,13 @@ import AboutDetail from './components/AboutDetail';
 import ServiceDetail from './components/ServiceDetail';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
-import './App.css';
 import Contact from './components/Contact';
+import ScrollToHash from './components/ScrollToHash';
 
 function App() {
   return (
     <Router>
+        <ScrollToHash />
       <div className="app">
         <Navbar />
         <main>
