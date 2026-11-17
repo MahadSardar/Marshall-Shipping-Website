@@ -5,6 +5,8 @@ import { faLocationDot, faPhone, faEnvelope, faFax } from '@fortawesome/free-sol
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
 const Contact = () => {
     const [loading, setloading] = useState(false)
     const [formData, setFormData] = useState({
@@ -61,7 +63,7 @@ const Contact = () => {
 
         setloading(true)
         try {
-            const response = await fetch('http://localhost:5000/send-email', {
+            const response = await fetch(`${API_URL}/send-email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
