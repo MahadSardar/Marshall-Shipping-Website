@@ -5,7 +5,7 @@ import { faLocationDot, faPhone, faEnvelope, faFax } from '@fortawesome/free-sol
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_URL = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_URL_LOCAL;
 
 const Contact = () => {
     const [loading, setloading] = useState(false)
